@@ -1,27 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import React, {useState} from 'react';
-import { Button, StyleSheet, Text, View, TextInput } from 'react-native';
+import React from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 
 export default function HomeScreen({navigation}) {
-  const [text, setText] = useState('');
-
   return (
     <View style={styles.container}>
       <Text>This is the Home Screen</Text>
-      <TextInput
-        style={styles.input}
-        onChangeText={newText => setText(newText)}
-        placeholder={"what is your name?"}
-        value={text}
-      />
       <Button 
       title='Login'
-      onPress={() => navigation.navigate("User", {name: text})}
-      ></Button>
-      <Button 
-      title='Go to the Second Screen'
-      onPress={() => navigation.push("Second")}
+      onPress={() => navigation.navigate("Second")}
       ></Button>
       <StatusBar style="auto" />
     </View>
