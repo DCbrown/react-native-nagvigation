@@ -8,7 +8,7 @@ export default function HomeScreen({navigation}) {
     <View style={styles.container}>
       <Text>This is the Home Screen</Text>
       <Button 
-      title='Login'
+      title='Second Screen'
       onPress={() => navigation.navigate("Second")}
       ></Button>
       <StatusBar style="auto" />
